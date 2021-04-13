@@ -1,0 +1,96 @@
+.articles {
+  padding: 3rem 1rem 0;
+  background: url(../assets/plant-3.png) right top no-repeat;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.article {
+  display: inline-block;
+  text-align: left;
+}
+
+.article img {
+  width: 100%;
+}
+
+.articleDetails {
+  position: relative;
+  padding: 2rem 1rem 0rem;
+}
+
+.article h4 {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 2.143;
+  color: #ffffff;
+  background: #846331;
+  margin: 0;
+}
+
+.article > div {
+  margin: 0.75rem;
+  background: #ffffff;
+  height: 100%;
+}
+
+.article > div > a {
+  line-height: 0;
+}
+
+.article h3 {
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+
+.article h3 a {
+  color: #846331;
+  text-decoration: none;
+}
+
+.article h3 a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .articles {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .article img {
+    height: 240px;
+  }
+}
+
+@media (min-width: 1112px) {
+  .articles {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .article {
+    margin-bottom: 1rem;
+  }
+
+  .article img {
+    object-fit: cover;
+  }
+
+  .articleDetails {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .article img {
+    height: 221px;
+  }
+}

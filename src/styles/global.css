@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+    url(../assets/fonts/SourceSansPro-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+    url(../assets/fonts/SourceSansPro-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+    url(../assets/fonts/SourceSansPro-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Core-icons';
+  src: url('../assets/fonts/Core-icons.eot');
+  src: url('../assets/fonts/Core-icons.svg#Core-icons') format('svg'),
+    url('../assets/fonts/Core-icons.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/Core-icons.woff') format('woff'), url('../assets/fonts/Core-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-Wallsheim';
+  font-weight: 300;
+  src: url(../assets/fonts/GT-Walsheim-Thin.woff);
+}
+
+@font-face {
+  font-family: 'GT-Wallsheim';
+  font-weight: 400;
+  src: url(../assets/fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+  font-family: 'GT-Wallsheim';
+  font-weight: 500;
+  src: url(../assets/fonts/GT-Walsheim-Medium.woff);
+}
+
+@font-face {
+  font-family: 'GT-Wallsheim';
+  font-weight: 700;
+  src: url(../assets/fonts/GT-Walsheim-Bold.woff);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: 'GT-Wallsheim', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #1c1c1c;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  line-height: 1.4;
+  color: #846331;
+  margin-bottom: 0.7rem;
+}
+
+h1,
+.h1 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+h3,
+.h3 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+h4,
+.h4 {
+  font-weight: 700;
+  font-size: 1.375rem;
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+  color: inherit;
+}
+
+h5,
+.h5 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-bottom: 1.625rem;
+  line-height: 1.143;
+  color: inherit;
+}
+
+p {
+  margin: 0 0 0.625rem;
+  margin-bottom: 0.7rem;
+}
+
+a {
+  color: #b49669;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.group {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+}
