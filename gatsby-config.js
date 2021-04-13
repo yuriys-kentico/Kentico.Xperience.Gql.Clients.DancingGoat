@@ -30,6 +30,5 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
-    'gatsby-transformer-typescript-css-modules',
   ],
 };
