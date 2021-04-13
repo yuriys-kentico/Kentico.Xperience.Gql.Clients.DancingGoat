@@ -1,6 +1,10 @@
 require('dotenv').config();
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+const environment = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+
+if (environment === 'development') {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
 
 module.exports = {
   flags: {
