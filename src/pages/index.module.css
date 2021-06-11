@@ -188,6 +188,15 @@
   line-height: 1.16666;
 }
 
+.cafes h2 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.16666;
+}
+
 .section p {
   font-weight: 500;
 }

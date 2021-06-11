@@ -31,13 +31,14 @@ export const query = graphql`
           }
         }
       }
+      relatedArticles: localize(key: "dancinggoat.relatedArticles")
     }
   }
 `;
 
 const Index: FC<PageProps<XperienceQuery>> = ({
   data: {
-    xperience: { site },
+    xperience: { site, relatedArticles },
   },
 }) => {
   const longPublicationDate = (article: Article) => {
@@ -65,7 +66,7 @@ const Index: FC<PageProps<XperienceQuery>> = ({
           <p dangerouslySetInnerHTML={{ __html: site.article.text }} />
         </div>
         <div className={styles.relatedArticles}>
-          {site.article.relatedArticles.length > 0 && <h2>Related articles</h2>}
+          {site.article.relatedArticles.length > 0 && <h2>{relatedArticles}</h2>}
           {site.article.relatedArticles.map((relatedArticle) => (
             <div key={relatedArticle.path} className={styles.relatedArticle}>
               <div className='group column'>

@@ -63,13 +63,17 @@ export const query = graphql`
           }
         }
       }
+      latestArticleHeading: localize(key: "dancinggoat.latestArticle")
+      moreArticles: localize(key: "dancinggoat.moreArticles")
+      tasteOurCoffee: localize(key: "dancinggoat.tasteOurCoffee")
+      findOutMore: localize(key: "dancinggoat.findOutMore")
     }
   }
 `;
 
 const Index: FC<PageProps<XperienceQuery>> = ({
   data: {
-    xperience: { site },
+    xperience: { site, latestArticleHeading, moreArticles, tasteOurCoffee, findOutMore },
   },
 }) => {
   const publicationDate = (article: Article) => {
@@ -91,7 +95,7 @@ const Index: FC<PageProps<XperienceQuery>> = ({
         dangerouslySetInnerHTML={{ __html: site.home.bannerText }}
       ></div>
       <div className={styles.articles}>
-        <h2>Latest article</h2>
+        <h2>{latestArticleHeading}</h2>
         <div className={styles.articleHero}>
           <div className='group'>
             <div className='item'>
@@ -135,7 +139,7 @@ const Index: FC<PageProps<XperienceQuery>> = ({
           })}
         </div>
         <div className={styles.more}>
-          <Link to='/articles'>More articles</Link>
+          <Link to='/articles'>{moreArticles}</Link>
         </div>
       </div>
       {site.home.sections.map((section) => (
@@ -175,7 +179,7 @@ const Index: FC<PageProps<XperienceQuery>> = ({
         ></div>
       </div>
       <div className={styles.cafes}>
-        <h2>Taste our coffee</h2>
+        <h2>{tasteOurCoffee}</h2>
         <div className='group'>
           {site.home.cafes.map((cafe) => (
             <div key={cafe.path} className={clsx('item', styles.cafe)}>
@@ -190,7 +194,7 @@ const Index: FC<PageProps<XperienceQuery>> = ({
           ))}
         </div>
         <div className={styles.more}>
-          <Link to='/cafes'>Find out more</Link>
+          <Link to='/cafes'>{findOutMore}</Link>
         </div>
       </div>
     </Layout>

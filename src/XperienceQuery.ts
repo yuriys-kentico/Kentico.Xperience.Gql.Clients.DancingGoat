@@ -96,5 +96,16 @@ export type XperienceQuery = {
       contact: Contact;
       menu: Page[];
     };
+    contact: string;
+    newsUpdates: string;
+    en: string;
+    stayUpToDate: string;
+    subscribe: string;
+    copyright: string;
+    latestArticleHeading: string;
+    relatedArticles: string;
+    moreArticles: string;
+    tasteOurCoffee: string;
+    findOutMore: string;
   };
 };

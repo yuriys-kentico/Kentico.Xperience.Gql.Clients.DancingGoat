@@ -8,7 +8,7 @@ import * as styles from './layout.module.css';
 
 const Layout: FC = ({ children }) => {
   const {
-    xperience: { site },
+    xperience: { site, contact, newsUpdates, en, stayUpToDate, subscribe, copyright },
   } = useStaticQuery<XperienceQuery>(graphql`
     {
       xperience {
@@ -43,6 +43,12 @@ const Layout: FC = ({ children }) => {
             city: field(name: "ContactCity")
           }
         }
+        contact: localize(key: "dancinggoat.contact")
+        newsUpdates: localize(key: "dancinggoat.newsUpdates")
+        en: localize(key: "dancinggoat.en")
+        stayUpToDate: localize(key: "dancinggoat.stayUpToDate")
+        subscribe: localize(key: "dancinggoat.subscribe")
+        copyright: localize(key: "dancinggoat.copyright")
       }
     }
   `);
@@ -74,7 +80,7 @@ const Layout: FC = ({ children }) => {
             </svg>
           </a>
           <a title='Language' className={styles.icon}>
-            EN
+            {en}
           </a>
           <Link className={styles.icon} to='/checkout/shoppingcart'>
             <svg width='26' height='24' viewBox='0 0 26 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -92,7 +98,7 @@ const Layout: FC = ({ children }) => {
       <footer>
         <div className='group'>
           <div className={clsx('item', styles.contact)}>
-            <h5>Contact</h5>
+            <h5>{contact}</h5>
             <address>
               {site.contact.phone}
               <br />
@@ -114,21 +120,19 @@ const Layout: FC = ({ children }) => {
             </div>
           </div>
           <div className={clsx('group column item', styles.news)}>
-            <h5>News &amp; Updates</h5>
+            <h5>{newsUpdates}</h5>
             <div className='group'>
               <div className='item'>
                 <label className='group column'>
-                  <span className='item'>Want to stay up to date? Please leave us your email address.</span>
+                  <span className='item'>{stayUpToDate}</span>
                   <input className={styles.subscribeEmail} type='email' maxLength={250} />
                 </label>
               </div>
               <div className='group'>
-                <button className={styles.subscribeButton}>Subscribe</button>
+                <button className={styles.subscribeButton}>{subscribe}</button>
               </div>
             </div>
-            <div
-              className={styles.copyright}
-            >{`Copyright © ${new Date().getFullYear()} Dancing Goat. All rights reserved.`}</div>
+            <div className={styles.copyright}>{copyright}</div>
           </div>
         </div>
       </footer>
